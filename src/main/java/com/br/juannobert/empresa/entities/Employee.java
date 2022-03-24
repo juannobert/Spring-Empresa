@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import com.br.juannobert.empresa.entities.enums.Position;
 
 
@@ -30,6 +33,7 @@ public class Employee implements Serializable {
 	private Integer position;
 	
 	@ManyToOne
+	@Cascade(CascadeType.ALL)
 	private Departament departament;
 	
 	public Employee() {
