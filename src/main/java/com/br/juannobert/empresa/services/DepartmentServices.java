@@ -27,4 +27,8 @@ public class DepartmentServices {
 	public Department insert(Department department) {
 		return repository.save(department);
 	}
+	
+	public void delete(Long id) {
+		repository.deleteById(id);
+	}
 }
