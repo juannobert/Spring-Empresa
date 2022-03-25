@@ -23,4 +23,8 @@ public class DepartmentServices {
 		Optional<Department> department = repository.findById(id);
 		return department.get();
 	}
+	
+	public Department insert(Department department) {
+		return repository.save(department);
+	}
 }
