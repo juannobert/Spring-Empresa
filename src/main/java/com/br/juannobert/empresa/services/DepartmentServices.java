@@ -5,14 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.br.juannobert.empresa.entities.Employee;
-import com.br.juannobert.empresa.repositories.EmployeeRepository;
+import com.br.juannobert.empresa.entities.Department;
+import com.br.juannobert.empresa.repositories.DepartamentRepository;
+
 @Service
-public class EmployeeServices {
-	@Autowired
-	EmployeeRepository repository;
+public class DepartmentServices {
 	
-	public List<Employee> findAll(){
+	@Autowired
+	DepartamentRepository repository;
+	
+	public List<Department> findAll(){
 		return repository.findAll();
 	}
 	

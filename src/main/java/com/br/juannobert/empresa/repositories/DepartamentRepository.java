@@ -3,9 +3,9 @@ package com.br.juannobert.empresa.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.br.juannobert.empresa.entities.Departament;
+import com.br.juannobert.empresa.entities.Department;
 
 @Repository
-public interface DepartamentRepository extends JpaRepository<Departament, Long> {
+public interface DepartamentRepository extends JpaRepository<Department, Long> {
 
 }

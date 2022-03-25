@@ -34,13 +34,13 @@ public class Employee implements Serializable {
 	
 	@ManyToOne
 	@Cascade(CascadeType.ALL)
-	private Departament departament;
+	private Department departament;
 	
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(Long id, String name, String email, Position position, Departament departament) {
+	public Employee(Long id, String name, String email, Position position, Department departament) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -81,11 +81,11 @@ public class Employee implements Serializable {
 		this.position = position.getCode();
 	}
 
-	public Departament getDepartament() {
+	public Department getDepartament() {
 		return departament;
 	}
 
-	public void setDepartament(Departament departament) {
+	public void setDepartament(Department departament) {
 		this.departament = departament;
 	}
 

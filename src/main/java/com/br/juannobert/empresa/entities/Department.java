@@ -12,9 +12,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "tb_departament")
-public class Departament implements Serializable {
+public class Department implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -23,15 +25,15 @@ public class Departament implements Serializable {
 	private Long id;
 	
 	private String name;
-	
+	@JsonIgnore
 	@OneToMany(mappedBy = "departament")
 	private Set<Employee> employee = new HashSet<>();
 	
-	public Departament() {
+	public Department() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Departament(Long id, String name) {
+	public Department(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -70,7 +72,7 @@ public class Departament implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Departament other = (Departament) obj;
+		Department other = (Department) obj;
 		return Objects.equals(id, other.id);
 	}
 
