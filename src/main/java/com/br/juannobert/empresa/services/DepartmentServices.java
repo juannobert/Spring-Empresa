@@ -1,6 +1,7 @@
 package com.br.juannobert.empresa.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,8 @@ public class DepartmentServices {
 		return repository.findAll();
 	}
 	
-	
+	public Department findById(Long id) {
+		Optional<Department> department = repository.findById(id);
+		return department.get();
+	}
 }
